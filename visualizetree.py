@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct  2 16:11:22 2020
+Started on Fri Oct  2 16:11:22 2020
 
 @author: abdka
 """
@@ -12,7 +12,7 @@ def dot_visualization(g):
     from graphviz import Digraph, Source
 
     def add_nodes_edges(tree, dot=None):
-        # Create Digraph object
+        # Initialize Digraph object
         if dot is None:
             dot = Digraph()
             dot.node(name=str(id(tree)), label=str(tree.value))
@@ -30,7 +30,7 @@ def dot_visualization(g):
 
         return dot
 
-    # Add nodes recursively and create a list of edges
+    # Add nodes recursively and build a list of edges
     dot = add_nodes_edges(g)
 
     # Visualize the graph
